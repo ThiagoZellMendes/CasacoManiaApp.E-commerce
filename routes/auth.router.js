@@ -125,7 +125,7 @@ function Routes(){
                 //Inclusão do TabNavigation
                     
                     name={"Main"} 
-                    component={LoginScreen}
+                    component={Home}
                     options={
                         {headerShown: false}
                     } 

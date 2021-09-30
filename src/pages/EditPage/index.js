@@ -317,6 +317,17 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     width: "50%",
   },
+  viewMask: {
+    flexDirection: 'row',
+    width: '93%',
+    marginBottom: 3,
+    backgroundColor: '#FFF',
+    color: '#4B0082',
+    fontSize: 17,
+    borderRadius: 7,
+    padding: 10,
+    alignSelf: 'center'
+  },
   inputText: {
     color: '#4B0082',
     fontSize: 17,
@@ -354,17 +365,6 @@ const styles = StyleSheet.create({
   submitText: {
     fontSize: 18,
     color: '#FFF'
-  },
-  viewMask: {
-    flexDirection: 'row',
-    width: '93%',
-    marginBottom: 3,
-    backgroundColor: '#FFF',
-    color: '#4B0082',
-    fontSize: 17,
-    borderRadius: 7,
-    padding: 10,
-    alignSelf: 'center'
   },
   viewMaskno: {
     flexDirection: 'row',

@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useContext, useState } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler'
 import MoletCart from '../../component/MoletCart'
 import { GlobalContext } from '../../context'
@@ -11,6 +11,7 @@ export default function CartProduct() {
   const navigation = useNavigation();
 
    let valorformat = totalValue
+
 //-------------------------------------------//
  
 //tras o carrinho para o foco sempre que chamado, assim atualizando o estado dele
@@ -29,7 +30,7 @@ export default function CartProduct() {
 
         <View style={styles.viewValor}>
           <Text style={styles.text}>Quantidade: {cart.length} </Text>
-          <Text style={styles.text}>Valor: {valorformat.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})}</Text>
+          <Text style={styles.text}>Valor: {valorformat.toFixed(2).replace(".", ",")}</Text>
         </View>
 
         <View style={styles.viewPagamento}>
@@ -122,4 +123,8 @@ const styles = StyleSheet.create({
     borderBottomColor: '#8a9497',
     borderBottomWidth: 1,
   },
+  inputQtd: {
+    width: '30%',
+    height: '20%',
+  }
 })
